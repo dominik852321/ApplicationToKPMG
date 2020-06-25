@@ -7,4 +7,8 @@ Jquery/Ajax,
 Bootstrap,
 MSSQL Server
 
+Potrzebne programy do uruchomienia projektu:
+Visual studio 2019 
+
+
 

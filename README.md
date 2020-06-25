@@ -27,9 +27,6 @@ git clone https://github.com/dominik852321/ApplicationToKPMG
 Po instalacji wchodzimy w folder, klikamy i uruchamiamy w programie Visual studio 2019 HomeworkFromKPMG.csproj
 
 
-## Contribute
-* Source Code: https://github.com/dominik852321/ApplicationToKPMG
-
 ## ScreenShots
 ### 1.Oto główne okno aplikacji
 ![](IMAGES/zdj1.png)

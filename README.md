@@ -31,22 +31,22 @@ Po instalacji wchodzimy w folder, klikamy i uruchamiamy w programie Visual studi
 * Source Code: https://github.com/dominik852321/ApplicationToKPMG
 
 ## ScreenShots
-Oto główne okno aplikacji
+### 1.Oto główne okno aplikacji
 ![](IMAGES/zdj1.png)
 
 
 
-Możemy wyszukać pracowników, pomaga nam w tym technologia ajax
+### 2.Możemy wyszukać pracowników, pomaga nam w tym technologia ajax
 ![](IMAGES/zdj2.png)
 
 
-Widzimy efekt
+### 3.Widzimy efekt
 ![](IMAGES/zdj3.png)
 
-Możemy wyszukiwać pracowników na podstawie daty zatrudnienia. (Przed datą, po tej dacie lub pomiędzy).
+### 4.Możemy wyszukiwać pracowników na podstawie daty zatrudnienia. (Przed datą, po tej dacie lub pomiędzy).
 ![](IMAGES/zdj4.png)
 
-W tym miejscu znajduję się team pod danym menagerem.
+### 5.W tym miejscu znajduję się team pod danym menagerem.
 ![](IMAGES/zdj5.png)
 
 ## Author

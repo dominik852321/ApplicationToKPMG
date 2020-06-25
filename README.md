@@ -24,6 +24,7 @@ Visual studio 2019
 W folderze z plikami właczamy wiersz poleceń git i wpisujemy:
 git clone https://github.com/dominik852321/ApplicationToKPMG
 
+Po instalacji wchodzimy w folder i klikamy i uruchamiamy w programie Visual studio 2019 HomeworkFromKPMG.csproj
 
 
 ## Contribute
@@ -33,10 +34,6 @@ git clone https://github.com/dominik852321/ApplicationToKPMG
 
 Dominik Orzechowski
 
-<p align="center">
-  <img src="your_relative_path_here" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
-</p>
 
 
 

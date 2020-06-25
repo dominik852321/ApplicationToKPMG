@@ -1,0 +1,42 @@
+[
+  {
+    "ManagerName": "Mcconnell",
+    "ManagerSurname": "Mcbride",
+    "ManagerEmployment": "2014-09-02"
+  },
+  {
+    "ManagerName": "Perez",
+    "ManagerSurname": "Small",
+    "ManagerEmployment": "2007-07-11"
+  },
+  {
+    "ManagerName": "Moses",
+    "ManagerSurname": "Hernandez",
+    "ManagerEmployment": "2013-03-20"
+  },
+  {
+    "ManagerName": "Morrow",
+    "ManagerSurname": "Mcclure",
+    "ManagerEmployment": "2008-01-13"
+  },
+  {
+    "ManagerName": "Burke",
+    "ManagerSurname": "West",
+    "ManagerEmployment": "2010-03-04"
+  },
+  {
+    "ManagerName": "Oneal",
+    "ManagerSurname": "Abbott",
+    "ManagerEmployment": "2019-05-29"
+  },
+  {
+    "ManagerName": "Rosario",
+    "ManagerSurname": "Sherman",
+    "ManagerEmployment": "2020-05-05"
+  },
+  {
+    "ManagerName": "Russell",
+    "ManagerSurname": "Garcia",
+    "ManagerEmployment": "2017-11-06"
+  }
+]

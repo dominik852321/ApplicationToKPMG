@@ -1,0 +1,95 @@
+﻿@model AllWorkersVM
+
+    <div class="col-sm-10 row mx-auto">
+
+
+        <div class="col-sm-6 container   pb-2 text-center">
+            <div class="display-4">Managers</div>
+
+            <div class="card blockquote  mt-4 p-3">
+                <div class="row">
+                    <div class="col-sm-2  ">
+                        Id
+                    </div>
+                    <div class="col-sm-4">
+                        Name
+                    </div>
+                    <div class="col-sm-3">
+                        Since
+                    </div>
+                    <div class="col-sm-3">
+                        Team
+                    </div>
+                </div>
+            </div>
+
+            @foreach (var manager in Model.Managers)
+            {
+                <div class="card m-3 img-thumbnail shadow-sm ">
+                    <div class="row  ">
+                        <div class="col-sm-1 text-center">
+                            @manager.Id
+                        </div>
+                        <div class="col-sm-4">
+                            @manager.ManagerName @manager.ManagerSurname
+                        </div>
+                        <div class="col-sm-3">
+                            @manager.ManagerEmployment.ToShortDateString()
+                        </div>
+                        <div class="col-sm-4 ">
+                            <select class="form-control ">
+                                <option>Team</option>
+                                @foreach(var employees in manager.Employees)
+                                {
+                                    <option>@employees.EmployeeName @employees.EmployeeSurname</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="col-sm-6 container  pb-2 text-center">
+            <div class="display-4">Employees</div>
+
+            <div class="card blockquote  mt-4 p-3">
+                <div class="row">
+                    <div class="col-sm-2 ">
+                        Id
+                    </div>
+                    <div class="col-sm-4">
+                        Name
+                    </div>
+                    <div class="col-sm-3">
+                        Since
+                    </div>
+                    <div class="col-sm-3">
+                        Manager
+                    </div>
+
+                </div>
+            </div>
+
+            @foreach (var employe in Model.Employees)
+            {
+                <div class="card m-2 img-thumbnail shadow-sm">
+                    <div class="row  ">
+                        <div class="col-sm-2 ">
+                            @employe.Id
+                        </div>
+                        <div class="col-sm-4">
+                            @employe.EmployeeName @employe.EmployeeSurname
+                        </div>
+                        <div class="col-sm-3">
+                            @employe.DateEmployment.ToShortDateString()
+                        </div>
+                        <div class="col-sm-3 ">
+                            @employe.Manager.ManagerName @employe.Manager.ManagerSurname
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>

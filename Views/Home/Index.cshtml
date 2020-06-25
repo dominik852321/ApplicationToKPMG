@@ -1,0 +1,119 @@
+﻿@model AllWorkersVM
+
+@{
+    ViewData["Title"] = "All workers";
+}
+
+
+<div class="col-10 mx-auto border shadow  mb-3">
+
+    <div class="col-md-12 p-2 row mx-auto ">
+
+
+        <div class="col-md-4 ">
+            <div class="blockquote text-center">Name</div>
+            <input type="text" class="form-control mx-auto" id="EmployeeName" value="@ViewBag.CurrentFilterName" placeholder="Name or Surname" autocomplete="on" />
+        </div>
+
+        <div class="col-md-1 my-auto">
+            <input type="button" class="btn btn-primary " id="btnSearch" value="Search" />
+        </div>
+
+
+        <div class="col-md-4 ml-auto">
+            <div class="blockquote text-center">Date of employment</div>
+            <div class="col-12 row ">
+                <div class="col-6 p-0">
+                    <input type="text" class="form-control mx-auto" id="dateSince" value="@ViewBag.CurrentFilterSince" placeholder="Before" />
+
+                </div>
+                <div class="col-6 p-0">
+                    <input type="text" class="form-control mx-auto" id="dateTo" value="@ViewBag.CurrentFilterTo" placeholder="After" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1 my-auto">
+            <input type="button" class="btn btn-primary" id="btnSearch2" value="Search" />
+        </div>
+
+    </div>
+</div>
+
+<div id="workers">
+    <partial name="_Workers" model="Model" >
+</div>
+
+
+@section Scripts{
+    <script>
+        $("#EmployeeName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '/Home/GetWorkers',
+                    dataType: "json",
+                    type: 'Get',
+                    data: { name: $("#EmployeeName").val() },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return item.employeeName + " " + item.employeeSurname
+                        }))
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Error");
+                    }
+                })
+            }
+        })
+
+    </script>
+    <script>
+        $("#btnSearch").click(function (e) {
+            $.ajax({
+                url: '/Home/SearchByName',
+                type: 'POST',
+                data: {
+                    CurrentFilterName: $("#EmployeeName").val(),
+                },
+                success: function (result) {
+                    $("#workers").html(result);
+                },
+                error: function (xhr, status, error) {
+                    alert("Error");
+                }   
+            })
+        });
+    </script>
+
+    <script>
+        $("#dateSince").datepicker({
+            dateFormat: "dd-mm-yy"
+        })
+        $("#dateTo").datepicker({
+            dateFormat: "dd-mm-yy"
+        })
+    </script>
+
+    <script>
+        $("#btnSearch2").click(function (e) {
+            $.ajax({
+                url: '/Home/SearchByData',
+                type: 'POST',
+                data: {
+                    CurrentFilterSince: $("#dateSince").val(),
+                    CurrentFilterTo: $("#dateTo").val()
+                },
+                success: function (result) {
+                    $("#workers").html(result);
+                },
+                error: function (xhr, status, error) {
+                    alert("Error");
+                }
+            })
+        });
+    </script>
+    
+   
+
+}
+
